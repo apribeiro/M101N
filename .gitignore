@@ -17,5 +17,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-#bin/
-#obj/
+bin/
+obj/
+*.suo
