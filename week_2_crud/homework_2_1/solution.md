@@ -10,3 +10,4 @@ What is the student_id of the lowest exam score above 65?
 ```sh
 > db.grades.find({score: {$gte: 65}}).sort({score: 1}).limit(1)
 ```
+**student_id = 22**
