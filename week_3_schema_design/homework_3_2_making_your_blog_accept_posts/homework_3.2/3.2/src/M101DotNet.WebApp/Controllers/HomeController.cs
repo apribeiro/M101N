@@ -18,7 +18,10 @@ namespace M101DotNet.WebApp.Controllers
         {
             var blogContext = new BlogContext();
             // Find the most recent 10 posts and order them from newest to oldest.
-            var recentPosts = await blogContext.Posts.Find<Post>("{}").SortByDescending(d => d.CreatedAtUtc).Limit(10).ToListAsync();
+            var recentPosts = await blogContext.Posts.Find<Post>(Builders<Post>.Filter.Empty)
+                .SortByDescending(d => d.CreatedAtUtc)
+                .Limit(10)
+                .ToListAsync();
 
             var model = new IndexModel
             {
@@ -90,7 +93,9 @@ namespace M101DotNet.WebApp.Controllers
 
             if (posts.Count == 0)
             {
-                posts = await blogContext.Posts.Find<Post>("{}").SortByDescending(p => p.CreatedAtUtc).ToListAsync();
+                posts = await blogContext.Posts.Find<Post>(Builders<Post>.Filter.Empty)
+                    .SortByDescending(p => p.CreatedAtUtc)
+                    .ToListAsync();
             }
 
             return View(posts);
