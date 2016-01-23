@@ -7,8 +7,8 @@
     <ProjectGuid>{20E5E086-BD2B-4E50-B783-387F1E4C2C91}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Homework2._2</RootNamespace>
-    <AssemblyName>Homework2.2</AssemblyName>
+    <RootNamespace>Homework2_2</RootNamespace>
+    <AssemblyName>Homework2_2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
