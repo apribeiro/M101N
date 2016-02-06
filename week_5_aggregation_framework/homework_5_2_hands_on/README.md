@@ -17,13 +17,13 @@ Please note:
 ```sh
 > db.zips.aggregate([
 	{
-		$group: { _id: {state: "$state", city: "$city"}, pop: {$sum: "$pop"} }
+		$group: {_id: {state: "$state", city: "$city"}, pop: {$sum: "$pop"}}
 	},
 	{
 		$match : {pop: {$gt: 25000}, "_id.state": {$in: ["CA", "NY"]}}
 	},
 	{
-		$group: { _id: "", average: {$avg: "$pop"} }
+		$group: {_id: "", average: {$avg: "$pop"}}
 	}
 ])
 ```

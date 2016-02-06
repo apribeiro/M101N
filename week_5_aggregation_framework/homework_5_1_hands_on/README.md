@@ -13,10 +13,10 @@ Use the aggregation framework to calculate the author with the greatest number o
 		$unwind : "$comments"
 	},
 	{
-		$group: { _id: "$comments.author", count: {$sum: 1} }
+		$group: {_id: "$comments.author", count: {$sum: 1}}
 	},
 	{
-		$sort: { count: -1}
+		$sort: {count: -1}
 	},
 	{
 		$limit: 1
