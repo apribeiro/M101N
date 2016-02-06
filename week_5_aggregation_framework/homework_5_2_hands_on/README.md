@@ -5,7 +5,7 @@
 Please calculate the average population of cities in California (abbreviation CA) and New York (NY) (taken together) with populations over 25,000.
 For this problem, assume that a city name that appears in more than one state represents two separate cities.
 
-Please round the answer to a whole number. 
+Please round the answer to a whole number.<br>
 Hint: The answer for CT and NJ (using this data set) is 38177.
 
 Please note:
