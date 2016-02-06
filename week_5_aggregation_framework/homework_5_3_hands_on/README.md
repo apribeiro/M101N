@@ -20,10 +20,10 @@ Hint/Strategy: You need to group twice to solve this problem. You must figure ou
 		$match : {"scores.type": {$in: ["homework", "exam"]}}
 	},
 	{
-		$group: {_id: {class_id: "$class_id", student_id: "$student_id"}, score: {$avg: "$scores.score"} }
+		$group: {_id: {class_id: "$class_id", student_id: "$student_id"}, score: {$avg: "$scores.score"}}
 	},
 	{
-		$group: {_id: "$_id.class_id", average: {$avg: "$score"} }
+		$group: {_id: "$_id.class_id", average: {$avg: "$score"}}
 	},
 	{
 		$sort: {average: -1}
